@@ -1,0 +1,56 @@
+program test1
+{
+	int i,j,a,b,c,x;
+	
+	int test2 (in a , inout b)
+	{
+		int aa,k,f;
+		
+		void test3(in aa, in k)
+		{
+			int f, g;
+			f:=b+c;
+			g:=i+k;
+			while(g<=f)
+			{
+				g:=g+f;
+			};
+		}
+		void test4( in i , inout j)
+		{
+			int s,d;
+			s:=a+b;
+			d:=s+c;
+			call test3(inout f, inout g)
+		}
+
+		aa:=a+b+c;
+		k:=aa+c;	
+		call test4(inout aa , in k );
+		return(k);
+	}
+
+	a:=10;
+	b:=15;
+	c:=20;
+	
+	if( a>b and b<c or c=1 )
+	{
+		while([x=1 or j=2] and b<1)
+		{
+			b:=b-1;
+		};
+	}
+	else
+	{
+		x:=1;
+	};
+
+	for( i := 10 ; i<15;  i += 1)
+	{
+		a := a+1;
+	};
+	print(a);
+	call test2(inout i ,inout k)
+
+}
